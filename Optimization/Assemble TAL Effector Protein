@@ -1,0 +1,42 @@
+s = input('Enter repeated DNA sequence:')
+datos1 = []
+for i in range (0,len(s)):
+datos1.append(s[i])
+ 
+datos2=[]
+for i in range (0,len(s)):
+ if datos1[i]=='T' or datos1[i]=='t':
+   datos2.append('NG')
+ if datos1 [i]=='A' or datos1 [i]=='a':
+   datos2.append('NI')
+ if datos1 [i]=='C' or datos1 [i]=='c':
+   datos2.append('HD')
+ if datos1 [i]=='G' or datos1 [i]=='g':
+   datos2.append('NN')
+ 
+print(' ')
+print ('Converted sequence: ')
+print(datos2)
+print(' ')
+print('TALE Sequence:')
+print(' ')
+ 
+p1='LTPEQVVAIAS'
+p2='GGKQALETVQRLLPVLCQAHG'
+ 
+datos3=[]
+ 
+for i in range (0,len(s)):
+ if i==len(s)-1:
+   datos3.append(p1+datos2[i])
+ else:
+   datos3.append(p1+datos2[i]+p2)
+ 
+nterminal=('MDPIRSRTPSPARELLSGPQPDGVQPTADRGVSPPAGGPLDGLPARRTMSRTRLPSPPAPSPAFSADSFSDLLRQFDPSLFNTSLFDSLPPFGAHHTEAATGEWDEVQSGLRAADAPPPTMRVAVTAARPPRAKPAPRRRAAQPSDASPAAQVDLRTLGYSQQQQEKIKPKVRSTVAQHHEALVGHGFTHAHIVALSQHPAALGTVAVKYQDMIAALPEATHEAIVGVGKQWSGARALEALLTVAGELRGPPLQLDTGQLLKIAKRGGVTAVEAVHAWRNALTGAPLN')
+ 
+print(nterminal)
+for i in range(0, len(s)):
+ print(datos3[i])
+ 
+cterminal=('PALESIVAQLSRPDPALAALTNDHLVALACLGGRPALDAVKKGLPHAPALIKRTNRRIPERTSHRVADHAQVVRVLGFFQCHSHPAQAFDDAMTQFGMSRHGLLQLFRRVGVTELEARSGTLPPASQRWDRILQASGMKRAKPSPTSTQTPDQASLHAFADSLERDLDAPSP')
+print(cterminal)
