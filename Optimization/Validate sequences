@@ -1,0 +1,15 @@
+def validate_base(b_sequence):
+ seq = b_sequence.upper()
+ return len(seq) == (seq.count('T') + seq.count('C') +
+ seq.count('A') + seq.count('G'))
+
+#Enter any DNA sequence
+seq = 'AAAT'
+
+def validate_RNA(r_sequence):
+ seq2 = r_sequence.upper()
+ return len(seq2) == (seq.count('U') + seq.count('C') +
+ seq.count('A') + seq.count('G'))
+
+#Enter any RNA sequence
+seq = 'AAAU'
