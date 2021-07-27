@@ -1,0 +1,46 @@
+#Enter any sequence: 
+SEC1 = 'GTCGACGTACACCTACCGGTCACCAGCCGGCGCGCCAACAATGTGCGGATGGCGTTACGACTTACTGGGGCCTGATCTCACCGCTTTAGATACCGCACACTGGGCAATACGAGGTAAAGCACGCGTCAGTCACCCAGTGTCGATCAACAGCTAACCCGTAACGGTAAGAGGCTTCTAGA'
+ 
+SEC2 = 'GGAGATCCTAGGGCCCGAGGAAATGTTTCATGACCAAGGGAAAGGTCGCCCTACGAAATAGATTTGCGTTACTGTCTGCATAAGGAGTCCGGTGTAGCGAAACTAGTGGATGAAGGGCGACCCTAGGTAGCAACCGCCGGCTTCGGCGGTAAGGTATCACTCAGGA'
+ 
+SEC3 = 'AGCAGACACAGAAAGACACGGTCTAGGTCGACCAGATCGTTTATCGGCTAGGTCAAATAGAGTGCTTTGATATCAGCATGTCTAGCTTTAGAAGGGTTCAGTTTAGTGCGCTGATCTGAGTCGAGATAAAATCACCAGTACCCGGGAAAACCACTCGAGGGCGGGCTCGCCACGTTGGCTAATCCTGG'
+ 
+DNA=''
+dna = DNA.upper()
+BglII='AGATCT'
+SalI='GTCGAC'
+XhoI='CTCGAG'
+SpeI='ACTAGT'
+XbaI='TCTAGA'
+AvrII='CCTAGG'
+BamHI='GGATCC'
+MluI='ACGCGT'
+AscI='GGCGCGCC'
+ 
+sq1=SEC1.count(SpeI)+SEC1.count(XbaI)+SEC1.count(AvrII)+SEC1.count(BamHI)+SEC1.count(BglII)+SEC1.count(SalI)+SEC1.count(XhoI)+SEC1.count(MluI)+SEC1.count(AscI)
+ 
+ 
+sq2=SEC2.count(SpeI)+SEC2.count(XbaI)+SEC2.count(AvrII)+SEC2.count(BamHI)+SEC2.count(BglII)+SEC2.count(SalI)+SEC2.count(XhoI)+SEC2.count(MluI)+SEC2.count(AscI)
+ 
+ 
+sq3=SEC3.count(SpeI)+SEC3.count(XbaI)+SEC3.count(AvrII)+SEC3.count(BamHI)+SEC3.count(BglII)+SEC3.count(SalI)+SEC3.count(XhoI)+SEC3.count(MluI)+SEC3.count(AscI)
+ 
+print('The sequence 1 have ', sq1," compatible enzymes")
+print('The sequence 2 have ', sq2," compatible enzymes")
+print('The sequence 3 have ', sq3," compatible enzymes")
+ 
+ATG1=SEC1.count('ATG')
+ATG2=SEC2.count('ATG')
+ATG3=SEC3.count('ATG')
+ 
+print ("The sequence 1 have : ",ATG1," ATG")
+print ("The sequence 2 have : ",ATG2," ATG")
+print ("The sequence 3 have : ",ATG3," ATG")
+ 
+PAM1=SEC1.count('GG')
+PAM2=SEC2.count('GG')
+PAM3=SEC3.count('GG')
+ 
+print ("The sequence 1 have: ",PAM1," PAM")
+print ("The sequence 2 have: ",PAM2," PAM")
+print ("The sequence 3 have: ",PAM3," PAM")
