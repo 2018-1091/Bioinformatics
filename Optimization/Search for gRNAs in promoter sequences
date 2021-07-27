@@ -1,0 +1,32 @@
+s = input('DNA Sequence:')
+datos1 = []
+for i in range (0,len(s)):
+datos1.append(s[i])
+ 
+datos2=[]
+for i in range (0,len(s)):
+ if datos1[i]=='G' and datos1[i+1]=='G':
+   datos2.append(datos1[i-21])
+   datos2.append(datos1[i-20])
+   datos2.append(datos1[i-19])
+   datos2.append(datos1[i-18])
+   datos2.append(datos1[i-17])
+   datos2.append(datos1[i-16])
+   datos2.append(datos1[i-15])
+   datos2.append(datos1[i-14])
+   datos2.append(datos1[i-13])
+   datos2.append(datos1[i-12])
+   datos2.append(datos1[i-11])
+   datos2.append(datos1[i-10])
+   datos2.append(datos1[i-9])
+   datos2.append(datos1[i-8])
+   datos2.append(datos1[i-7])
+   datos2.append(datos1[i-6])
+   datos2.append(datos1[i-5])
+   datos2.append(datos1[i-4])
+   datos2.append(datos1[i-3])
+   datos2.append(datos1[i-2])
+ 
+n=len(datos2)/20
+
+#Call n variable 
