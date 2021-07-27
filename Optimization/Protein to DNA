@@ -1,0 +1,16 @@
+table={'F' : 'TTT', 'L' : 'CTT', 'I' : 'ATT', 'V': 'GTT',
+   'M' : 'ATG', 'S' : 'TCT', 'P' : 'CCT', 'T' : 'ACT', 'A' : 'GCT',
+   'Y' : 'TAT', 'H' : 'CAT', 'N' : 'AAT', 'D' : 'GAT',
+   'STOP' : 'TAA', 'Q': 'CAA', 'K': 'AAA', 'E' : 'GAA',
+   'C' : 'TGT','R' : 'CGT', 'G' : 'GGT','W' : 'TGG'}
+ 
+seq=input('Protein Sequence:');
+dna=[]
+if len(seq)%1 == 0:
+for i in range(0, len(seq), 1):
+  x = seq[i:i + 1]
+  dna+= table[x]
+print('')
+print('ADN Sequence:')
+dna = "".join(dna)
+print(dna)
