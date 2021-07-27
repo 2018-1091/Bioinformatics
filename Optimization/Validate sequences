@@ -2,14 +2,23 @@ def validate_base(b_sequence):
  seq = b_sequence.upper()
  return len(seq) == (seq.count('T') + seq.count('C') +
  seq.count('A') + seq.count('G'))
-
-#Enter any DNA sequence
-seq = 'AAAT'
+seq='AUAT'
+print(validate_base(seq))
 
 def validate_RNA(r_sequence):
  seq2 = r_sequence.upper()
- return len(seq2) == (seq.count('U') + seq.count('C') +
- seq.count('A') + seq.count('G'))
+ return len(seq2) == (seq2.count('U') + seq2.count('C') +
+ seq2.count('A') + seq2.count('G'))
+seq2='AUCG'
+print(validate_RNA(seq2))
 
-#Enter any RNA sequence
-seq = 'AAAU'
+def validate_protein(p_sequence):
+    seq3 = p_sequence.upper()
+    return len(seq3) == (seq3.count('A') + seq3.count('R') +
+    seq3.count('N') + seq3.count('D') + seq3.count('B') + seq3.count('C') +
+    seq3.count('Q') + seq3.count('E')+seq3.count('Z') + seq3.count('G') +
+    seq3.count('H') + seq3.count('I') + seq3.count('L') + seq3.count('K') +
+    seq3.count('M') + seq3.count('F')+seq3.count('P') + seq3.count('S') + seq3.count('T') + seq3.count('W') +
+    seq3.count('Y') + seq3.count('V'))
+seq3='ANQPL'
+print(validate_protein(seq3))
