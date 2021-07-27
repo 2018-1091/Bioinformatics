@@ -1,0 +1,185 @@
+def principal():
+  print('Presione 1 para mostrar lista') 
+  print('Presione 2 para ordenar la lista')
+  print('Presione 3 para acceder al CRUD')
+  print('Presione 4 para cargar los datos')
+  print('Presione 5 para grabar los datos')
+  print('Presione 6 para salir ')
+def menu():
+  print('Presione 1 para listar información')
+  print('presione 2 para agregar valor')
+  print('presione 3 para eliminar valor')
+  print('presione 4 para actualizar')
+  print('presione 5 para salir')
+
+def listar():
+  print('Si desea imprimir el grupo, presione A')
+  print('Si desea imprimir el grupo, presione B')
+  print('Si desea imprimir el grupo, presione C')
+  print('Si desea imprimir el grupo, presione D')
+  print('Si desea imprimir el grupo, presione E')
+  print('Si desea imprimir el grupo, presione F')
+  print('Si desea imprimir el grupo, presione g')
+  print('Si desea imprimir el grupo, presione H')
+
+a=['Uruguay','Rusia','Arabia Saudita','Egipto']
+b=['España','Portugal','Marruecos','Iràn']
+c=['Francia','Dinamarca','Perù','Australia']
+d=['Croacia','Argentina','Nigeria','Islandia']
+e=['Brasil','Suiza','Serbia','Costa Rica']
+f=['Suecia','Mexico','Korea del sur','Alemania']
+g=['Bèlgica','Inglaterra','Tunez','Panamà']
+h=['Colombia','Japon','Senegal','Polonia']
+principal()
+pr=(input('Ingrese la opción escogida: '))
+if pr=='1':
+    f=open('D:/Mundial.txt','r')
+    linea=f.readline()
+    while linea != '':
+    # procesar línea
+        linea=f.readline()
+        print(linea)
+    input('Has pulsado la opción 3...\npulsa una tecla para continuar')
+    print('¿Desea salir de la opciòn?')
+    respuesta1=input('Responda si o no: ')
+    if respuesta1=='si':
+        principal()
+        pr=(input('Ingrese la opción escogida: '))
+elif pr=='2':
+    file = open('D:/Mundial.txt', 'r')
+    read_file = file.readlines()
+    file.close()
+    z = []
+    for i in range(len(read_file)):
+        z.append(read_file[i].rstrip().split('  '))
+    for i in range(2,5):
+        z.append(read_file[i].rstrip().split('  '))
+    ord= input('¿como desea ordenar?: 1.Ascendente 2.Descendente: ' )
+    if ord=='1':
+        ascendente=z.sort()
+        print(z)
+    elif ord=='2':
+        descendente=z.sort(reverse=True)
+        print (z)
+    else:
+        print('valor incorrecto')
+    principal()
+    pr=(input('Ingrese la opción escogida: '))
+elif pr=='3':
+    menu()
+    opcion=input('ingrese opción del CRUD: ')
+    if opcion=='1':
+        listar()
+        list=input('Que grupo desea listar: ')
+        lista=list.upper()
+        print ('Listar', lista)
+        if lista=='A':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=0 and i<=6)
+            for linea in it:
+                print(linea)
+        elif lista=='B':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=6 and i<=13)
+            for linea in it:
+                print (linea)
+        elif lista=='C':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=13 and i<=20)
+            for linea in it:
+                print(linea)
+        elif lista=='D':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=20 and i<=27)
+            for linea in it:
+                print (linea)
+        elif lista=='E':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=27 and i<=34)
+            for linea in it:
+                print (linea)
+        elif lista=='F':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=34 and i<=41)
+            for linea in it:
+                print (linea)
+        elif lista=='G':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=41 and i<=48)
+            for linea in it:
+                print (linea)
+        elif lista=='H':
+            f=open("D:/Mundial.txt","r")
+            it=(linea for i,linea in enumerate(f) if i>=48 and i<=55)
+            for linea in it:
+                print (linea)
+        input('pulsa una tecla para continuar')
+        principal()
+        pr=(input('Ingrese la opción escogida: '))
+    elif opcion=='2':
+        print ('Añadir valores')
+        f=open('D:/Mundial.txt','a')
+        pais=input('ingrese el pais: ')
+        pj=input('ingrese el pj: ')
+        G=input('ingrese el G: ')
+        E=input('ingrese el E: ')
+        P=input('ingrese el P: ')
+        GF=input('ingrese el GF: ')
+        GC=input('ingrese el GC: ')
+        DG=input('ingrese el DG: ')
+        PTS=input('ingrese el PTS: ')
+        f.write('\n' +pais +'  ' +pj +'   '+ G +'   '+ E+'   ' + P+'   ' + GF+'   ' + GC+'   ' + DG+'   ' + PTS)
+        f=open('D:/Mundial.txt','r')
+        linea=f.readline()
+        while linea != '':
+        # procesar línea
+            linea=f.readline()
+            print(linea)
+        input('Has pulsado la opción 2...\npulsa una tecla para continuar')
+        principal()
+        pr=(input('Ingrese la opción escogida: '))
+    elif opcion=='3':
+        print ('Eliminar valores')
+        eli=input('Ingrese el valor que desea eliminar: ')
+
+        input('Has pulsado la opción 3...\npulsa una tecla para continuar')
+        principal()
+        pr=(input('Ingrese la opción escogida: '))
+    elif opcion=='4':
+        print ('Actualizar valores')
+        input('Has pulsado la opción 4...\npulsa una tecla para continuar')
+        principal()
+        pr=(input('Ingrese la opción escogida: '))
+    elif opcion=='5':
+        print ('cerrar')
+        input('Has pulsado la opción 5...\npulsa una tecla para continuar')
+        principal()
+        pr=(input('Ingrese la opción escogida: '))
+    else:
+        print ('No ingresó un valor aceptado')
+        input('No has pulsado ninguna opción correcta...\npulsa una tecla para continuar')
+elif pr=='4':
+    ca=input('Pulse 1 para cargar los datos')
+    if ca=='1':
+        f=open('D:/Mundial.txt','r')
+        linea=f.readline()
+        while linea != '':
+        # procesar línea
+            linea=f.readline()
+            print(linea)
+        print('datos cargados correctamente')
+    else:
+        print('No se ha cargado los datos')
+    principal()
+elif pr=='5':
+    ga=input('Pulse 1 para grabar los datos')
+    if ga=='1':
+        print('datos grabados correctamente')
+    else:
+        print('No se ha grabado los datos')
+    principal()
+elif pr=='6':
+    print('Ha finalizado el programa')
+else:
+    print('Valor no valido')
+
