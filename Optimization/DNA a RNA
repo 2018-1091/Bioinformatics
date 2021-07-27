@@ -1,0 +1,21 @@
+s = input('DNA sequence:')
+print('')
+data1 = []
+for i in range (0,len(s)):
+data1.append(s[i])
+ 
+data2=[]
+for i in range (0,len(s)):
+ if data1[i]=='T' or data1[i]=='t':
+   data2.append('A')
+ if data1 [i]=='A' or data1 [i]=='a':
+   data2.append('U')
+ if data1 [i]=='C' or data1 [i]=='c':
+   data2.append('G')
+ if data1 [i]=='G' or data1 [i]=='g':
+   data2.append('C')
+ 
+print('')
+print('RNA sequence:')
+RNA = "".join(data2)
+print(RNA)
